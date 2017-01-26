@@ -5,7 +5,6 @@ angular.module('livepost')
         scope.$watch(attrs.videoLoader, function(){
             element[0].addEventListener("play", function(){
                 if(scope.trackVideo){
-                    console.log("play?")
                     scope.trackVideo();
                     scope.$apply();    
                 }

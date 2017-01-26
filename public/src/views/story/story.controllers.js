@@ -28,16 +28,16 @@ angular.module('livepost')
 
     $scope.iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
-    function inIframe() {
+    $scope.inIframe = function() {
         try {
             return window.self !== window.top;
         } catch (e) {
             return true;
         }
-    }
+    };
 
     if ($scope.iOS) {
-        if (inIframe()) {
+        if ($scope.inIframe()) {
             $scope.limit = 1000;
         }
     }
@@ -71,7 +71,6 @@ angular.module('livepost')
                     });
                 }
             });
-            // $scope.slides = $scope.slides.reverse();
         });
 
     });
@@ -125,4 +124,8 @@ angular.module('livepost')
     };
 
     // $scope.savePresenceSystem();
+
+    $scope.isNullOrEmpty = function(value){
+    	return value === undefined || value === null;
+    };
 });

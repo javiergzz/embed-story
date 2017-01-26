@@ -19,7 +19,7 @@
                </div>
                <div angular-lazy-load ng-if="item.message.indexOf('https://livepostrocks.s3.amazonaws.com/videos/') != -1 || item.message.indexOf('http://livepostdev.blob.core.windows.net/videos/') != -1" class="col-xs-10  col-lg-11">
                   <video video-loader class="video" controls>
-                     <source src="{{item.message}}">
+                     <source ng-src="{{item.message}}">
                   </video>
                </div>
             </div>

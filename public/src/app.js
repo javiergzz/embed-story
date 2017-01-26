@@ -5,7 +5,8 @@ angular.module('livepost', [
     'ngSanitize',
     'LocalStorageModule',
     'ui.bootstrap',
-    'firebase'
+    'firebase',
+    'fix-image-orientation'
 ])
 .config(function($routeProvider, MyRoutesProvider, $sceProvider, localStorageServiceProvider) {
     "use strict";
