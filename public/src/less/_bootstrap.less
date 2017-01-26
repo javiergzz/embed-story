@@ -1,0 +1,69 @@
+.btn-primary{
+	background-color: @color;
+	border-color: @color;
+	&.active, &.focus, &:active, &:focus, &:hover, .open>.dropdown-toggle&{
+		background-color: @dark-hover;
+		border-color: @bg-dark;
+	}
+}
+
+.glyphicon-trash{
+	cursor: pointer;
+}
+
+.modal-dialog{
+	z-index: 10000;
+	li{
+		list-style-type: none;
+	}
+}
+
+.glyphicon-trash-carrito{
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 5px;
+    border: 2px solid;
+    border-color: grey;
+}
+
+.glyphicon-pencil{
+    cursor: pointer;
+}
+
+.glyphicon-pencil-carrito{
+    cursor: pointer;
+    padding: 7px 9px 7px 9px;
+    border-radius: 5px;
+    border: 2px solid;
+    border-color: grey;
+}
+
+.glyphicon-arrow-right-ecolaborador{
+    float : right; 
+    cursor: pointer;
+    padding: 7px;
+    border-radius: 5px;
+    border: 2px solid;
+    border-color: grey;
+}
+
+.dropdown-menu{
+	&.include{
+		> li{
+			> a{
+				display: block;
+				padding: 3px 20px;
+				clear: both;
+				font-weight: 400;
+				line-height: 1.42857143;
+				white-space: nowrap;
+			}
+		}
+	}
+	> .active{
+		> a, > a:hover, > a:focus{
+			background-color: @color;
+			color: white !important;
+		}
+	}
+}

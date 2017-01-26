@@ -1,0 +1,15 @@
+{
+  "rules": {
+    ".read": true,
+    ".write": true,
+    "updates": {
+      ".read": true,
+      ".write": "auth != null",
+      "$pushId": {
+        ".indexOn": [
+          "timestamp"
+        ]
+      }
+    }
+  }
+}

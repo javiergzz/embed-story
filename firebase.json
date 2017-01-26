@@ -1,0 +1,19 @@
+{
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "hosting": {
+    "public": "public",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "redirects": [{
+      "source": "https://analytics.livepost.co/",
+      "destination": "https://livepost.co/p/analytics/",
+      "type": 301
+    }]
+  }
+}

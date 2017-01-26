@@ -1,0 +1,57 @@
+{
+  "name": "story-embed",
+  "authors": [
+    "Javier Gonzalez <fcogzz.r@gmail.com>"
+  ],
+  "description": "The story iframe",
+  "main": "index.html",
+  "keywords": [
+    "livepost"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.6.1",
+    "angular-animate": "~1.6.1",
+    "angular-cookies": "~1.6.1",
+    "angular-resource": "~1.6.1",
+    "angular-chart.js": "^1.1.1",
+    "bootstrap": "~3.3.7",
+    "angular-touch": "~1.6.1",
+    "angular-ui-grid": "^4.0.2",
+    "angular-ui-bootstrap-datetimepicker": "^2.0.3",
+    "angular-bootstrap": "^2.4.0",
+    "angular-ui-select": "^0.19.6",
+    "angular-local-storage": "^0.5.2",
+    "firebase": "^3.6.7",
+    "angularfire": "^2.3.0",
+    "angular-sanitize": "^1.6.1",
+    "angular-route": "^1.6.1"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "less/bootstrap.less",
+        "dist/css/bootstrap.css",
+        "dist/js/bootstrap.js",
+        "dist/fonts/glyphicons-halflings-regular.eot",
+        "dist/fonts/glyphicons-halflings-regular.svg",
+        "dist/fonts/glyphicons-halflings-regular.ttf",
+        "dist/fonts/glyphicons-halflings-regular.woff",
+        "dist/fonts/glyphicons-halflings-regular.woff2"
+      ]
+    }
+  },
+  "devDependencies": {},
+  "resolutions": {
+    "angular": "~1.6.1"
+  }
+}

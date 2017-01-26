@@ -1,0 +1,24 @@
+<style type="text/css">
+   .modal-body {
+		position: relative;
+   }
+   .img-modal {
+	   display: block;
+	   margin-left: auto;
+	   margin-right: auto;
+   }
+   
+</style>
+<div class="modal-body">
+   <!-- <img class="img-responsive img-modal" ng-src="{{ imageSelected }}"> -->
+   <div style="max-height: 423px">
+      <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+         <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+            <img class="img-responsive img-modal" ng-src="{{slide.image}}" style="margin:auto;">
+            <div class="carousel-caption">
+             <h6>{{slide.id + 1 }} of {{slides.length}}</h6>
+           </div>
+         </div>
+      </div>
+   </div>
+</div>

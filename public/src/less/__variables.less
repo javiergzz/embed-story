@@ -1,0 +1,57 @@
+//COLORES Y TONALIDADES GENÉRICAS
+@color: #0090D1; //
+@font-light : white;
+@bg-dark: darken(@color, 40%);
+@black01: #333;
+//***************************COLORES CABECERA Y MENU DE CABECERA****************************
+//DEFAULT
+@navbar-color: @color; //COLOR DE LA BARRA
+@font-navbar: @font-light; //COLOR DE LA FUENTE
+
+//HOVER
+@light-hover: lighten(@color, 25%); //COLOR DEL FONDO DEL MENÚ ABIERTO O HOVER (MODO CLARO)
+@dark-hover: darken(@color, 25%); //COLOR DEL FONDO DEL MENÚ ABIERTO O HOVER (MODO OSCURO)
+	@color-hover: @light-hover; //COLOR DEL FONDO GENÉRICO CUANDO EL MENÚ ES ABIERTO O HOVER
+	@font-hover: @dark-hover; //COLOR DE LA FUENTE CUANDO EL MENÚ ES ABIERTO O HOVER
+//OPEN
+@color-open: @color-hover; //COLOR DEL FONDO DEL MENÚ ABIERTO
+@font-open: @font-hover; //COLOR DE LA FUENTE DEL MENÚ ABIERTO
+//ACTIVE
+@color-active: @dark-hover; //COLOR DEL FONDO DEL MENÚ ACTIVO
+@font-active: @light-hover; //COLOR DE LA FUENTE DEL MENÚ ACTIVO
+//TITULO
+@title-color: black;
+//******************************************************************************************
+
+//***************************COLORES DEL MENÚ LATERAL****************************
+//DEFAULT
+@mside-bg-color: @black01; //COLOR DEL FONDO
+@mside-menu-bg-color: @mside-bg-color; //COLOR DEL FONDO DEL MENU
+@mside-font-navbar: @font-light; //COLOR DE LA FUENTE
+@mside-item-color: lighten(@black01, 5%);//COLOR DEL ITEM DEL MENÚ
+
+//HOVER
+@mside-light-hover: lighten(@color, 25%); //COLOR DEL FONDO DEL MENÚ ABIERTO O HOVER (MODO CLARO)
+@mside-dark-hover: darken(@color, 25%); //COLOR DEL FONDO DEL MENÚ ABIERTO O HOVER (MODO OSCURO)
+	@mside-color-hover: @light-hover; //COLOR DEL FONDO GENÉRICO CUANDO EL MENÚ ES ABIERTO O HOVER
+	@mside-font-hover: @dark-hover; //COLOR DE LA FUENTE CUANDO EL MENÚ ES ABIERTO O HOVER
+//OPEN
+@mside-color-open: @color-hover;
+@mside-font-open: @font-hover; //COLOR DE LA FUENTE DEL MENÚ ACTIVO
+//ACTIVE
+@mside-color-active: @color-active;
+@mside-font-active: @font-active; //COLOR DE LA FUENTE DEL MENÚ ACTIVO
+//******************************************************************************************
+
+
+
+
+
+
+@tab-height: 40px;
+//deep
+@z-sidebars: 1000;
+@z-site: 1010;
+@z-footers: 1020;
+@z-navbar: 1030;
+@z-buttons-navbar: @z-navbar+10;

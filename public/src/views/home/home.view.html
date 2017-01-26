@@ -1,0 +1,246 @@
+<style id="pagecloud-reset" class="pagecloud design-safe">
+ /* NOTE: You shouldn't change this style block.	*/
+ /* If you need to override styles, you should	*/
+ /* Add your own style block after this one.		*/
+ /* CSS Reset */
+ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+ pre, abbr, address, cite, code, del, dfn, em, img, ins,
+ kbd, q, samp, small, strong, sub, sup, var, b, i,
+ dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption,
+ tbody, tfoot, thead, tr, th, td, article, aside, canvas, details,
+ figcaption, figure, footer, header, hgroup, menu, nav, section, summary,
+ time, mark, audio, video
+ {margin: 0px; padding: 0px; border: none; outline: none; font-size: 100%; vertical-align: baseline; background: transparent}
+ body {line-height: normal;}
+ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+ nav ul {list-style: none;}
+ blockquote, q {quotes: none;}
+ blockquote:before, blockquote:after, q:before, q:after {content: ''; content: none;}
+ a {margin: 0px; padding: 0px; font-size: 100%; vertical-align: baseline; background: transparent;}
+ ins {text-decoration: none;}
+ mark {font-style: normal; font-weight: normal;}
+ del {text-decoration: none;}
+ abbr[title], dfn[title] {border-bottom: 1px dotted; cursor: help;}
+ table {border-collapse: collapse; border-spacing: 0;}
+ hr {display: block; height: 1px; border: none; border-top: 1px solid black; margin: 1em 0px; padding: 0px;}
+ input, select {vertical-align: middle;}
+ ul, ol {list-style-image: none; list-style-position: inherit; list-style-type: none;}
+ code, samp, mark {font-family: inherit;}
+ p {font-style: inherit;}
+ table {empty-cells: show;}
+ /* Convert to inline */
+ address, dl, dt, dd, caption, legend, abbr, address, cite, code,
+ del, ins, mark, strike, sub, sup, label, time  {display: inline;}
+ /* Fix Safari 7 text rendering (spidery) */
+ body, body *	{-webkit-font-smoothing: subpixel-antialiased;}
+ /* Remove format from semantic tags */
+ cite	{font-style: normal;}
+</style>
+<style id="pagecloud-common" class="pagecloud design-safe">
+ /* NOTE: You shouldn't change this style block.	*/
+ /* If you need to override styles, you should	*/
+ /* Add your own style block after this one.		*/
+ body							{color: rgb(0, 0, 0); font-family: helvetica; line-height: 1.2 /* = normal */; font-weight: 400; font-size: 15px;}
+ /* Prevent mobile safari from zooming certain fonts */
+ body							{-webkit-text-size-adjust: 100%;}
+ h1, h2, h3, h4, h5, h6			{font-weight: inherit;}
+ /* Common run-time object styles */
+ .object									{display: block;}
+ .object.hidden:not(.animated), .object[data-hidden='true']:not(.animated)			{display: none !important;}
+ body.editing .object.hidden, 	body.editing .object[data-hidden='true'] {display: block !important;}
+ .Firefox .object.attachment table		{position: relative; top: 2px;}
+ .object.attachment td.content			{word-wrap: break-word; text-align: left; vertical-align: top;}
+ .object.attachment a:hover				{opacity: 0.6 !important;}
+ .object.text td.content					{word-wrap: break-word; text-align: left; vertical-align: top;}
+ .object.text a							{cursor: pointer;}
+ .object.text a:hover					{opacity: 0.6 !important;}
+ a.object:hover							{opacity: 0.8;}
+ a										{text-decoration: inherit; color: inherit;}
+ /* Text object reset */
+ .object.text					{color: rgb(0, 0, 0); font-family: helvetica; line-height: 1.2 /* = normal */; font-weight: 400; font-size: 15px;}
+ /* Form elements */
+ input[type="text"]				{border-radius: 2px; background-color: white;}
+ /* Focus glow */
+ a:focus, input:focus			{box-shadow: 0px 0px 4px rgba(26, 100, 165, 1.0), 0px 0px 4px rgba(26, 100, 165, 1.0) inset !important; outline: none; outline-offset: 0px;}
+ input::-moz-focus-inner:		{padding: 0px; border: none;}
+ input[type="text"]				{-webkit-appearance: none; -moz-appearance: none; border: solid 1px rgb(230,230,230);}
+ input[type="text"]:focus		{border-color: rgba(26, 100, 165, 0.5);}
+ /* Font corrections for .object.text td */
+ .IE			.IE-nudge-up-1px		{position: relative; top: -1px;}
+ .Firefox	.Firefox-nudge-up-1px	{position: relative; top: -1px;}
+ .Webkit		.Webkit-nudge-up-1px	{position: relative; top: -1px;}
+ .Safari		.Safari-nudge-up-1px	{position: relative; top: -1px;}
+ .Chrome		.Chrome-nudge-up-1px	{position: relative; top: -1px;}
+ .Windows	.Windows-nudge-up-1px	{position: relative; top: -1px;}
+ .Mac		.Mac-nudge-up-1px		{position: relative; top: -1px;}
+ .IE			.IE-nudge-down-1px		{position: relative; top: 1px;}
+ .Firefox	.Firefox-nudge-down-1px	{position: relative; top: 1px;}
+ .Webkit		.Webkit-nudge-down-1px	{position: relative; top: 1px;}
+ .Safari		.Safari-nudge-down-1px	{position: relative; top: 1px;}
+ .Chrome		.Chrome-nudge-down-1px	{position: relative; top: 1px;}
+ .Windows	.Windows-nudge-down-1px	{position: relative; top: 1px;}
+ .Mac		.Mac-nudge-down-1px		{position: relative; top: 1px;}
+ .IE			.IE-nudge-up-2px		{position: relative; top: -2px;}
+ .Firefox	.Firefox-nudge-up-2px	{position: relative; top: -2px;}
+ .Webkit		.Webkit-nudge-up-2px	{position: relative; top: -2px;}
+ .Safari		.Safari-nudge-up-2px	{position: relative; top: -2px;}
+ .Chrome		.Chrome-nudge-up-2px	{position: relative; top: -2px;}
+ .Windows	.Windows-nudge-up-2px	{position: relative; top: -2px;}
+ .Mac		.Mac-nudge-up-2px		{position: relative; top: -2px;}
+ .IE			.IE-nudge-down-2px		{position: relative; top: 2px;}
+ .Firefox	.Firefox-nudge-down-2px	{position: relative; top: 2px;}
+ .Webkit		.Webkit-nudge-down-2px	{position: relative; top: 2px;}
+ .Safari		.Safari-nudge-down-2px	{position: relative; top: 2px;}
+ .Chrome		.Chrome-nudge-down-2px	{position: relative; top: 2px;}
+ .Windows	.Windows-nudge-down-2px	{position: relative; top: 2px;}
+ .Mac		.Mac-nudge-down-2px		{position: relative; top: 2px;}
+ .fullbleed {
+ min-width: 100% !important;
+ width: 100vw !important;
+ left: 50% !important;
+ box-sizing: border-box;
+ -webkit-transform: translateX(-50%) !important;
+ -ms-transform: translateX(-50%) !important;
+ transform: translateX(-50%) !important;
+ }
+</style>
+<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script type="text/javascript" async="" src="https://d1l7z5ofrj6ab8.cloudfront.net/visitor/js/widget-loader.js"></script><script type="text/javascript" id="www-widgetapi-script" src="https://s.ytimg.com/yts/jsbin/www-widgetapi-vflFoWyC7/www-widgetapi.js" async=""></script><script type="text/javascript" id="www-widgetapi-script" src="https://s.ytimg.com/yts/jsbin/www-widgetapi-vflBy1d5C/www-widgetapi.js" async=""></script><script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" class="pagecloud-runtime" data-class="pagecloud"></script><script type="text/javascript" src="https://assets.pagecloud.com/javascripts/useragent.fee9f5557a33.js" class="pagecloud-runtime" charset="utf-8" data-class="pagecloud"></script><script type="text/javascript" src="https://assets.pagecloud.com/javascripts/animo.b1d06bb0a90b.js" class="pagecloud-runtime" charset="utf-8" data-class="pagecloud"></script><script id="runtime-js" data-static-path="//assets.pagecloud.com/" data-class="pagecloud" type="text/javascript" src="//assets.pagecloud.com/javascripts/libraries/runtime.js"></script>
+<meta name="pagecloud-mobile-mode" content="true">
+<meta http-equiv="last-modified" content="2016-10-21@23:13:17 UTC">
+<link rel="stylesheet" type="disabled" class="pagecloud design-safe" _href="https://fonts.googleapis.com/css?family=Arbutus:100,200,300,400,500,600,700,100italic,200italic,300italic,400italic,500italic,600italic,700italic">
+<link rel="stylesheet" type="text/css" class="pagecloud design-safe" href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,100italic,200italic,300italic,400italic,500italic,600italic,700italic">
+<link rel="stylesheet" type="disabled" class="pagecloud design-safe" _href="https://fonts.googleapis.com/css?family=Exo:100,200,300,400,500,600,700,100italic,200italic,300italic,400italic,500italic,600italic,700italic">
+<script type="text/javascript" id="www-widgetapi-script" src="https://s.ytimg.com/yts/jsbin/www-widgetapi-vfl9r3s0R/www-widgetapi.js" async=""></script>
+<style type="text/css" class="design-safe"></style>
+<meta name="description" content="LivePost let's content creators cover news and events from their phone in real time. This is the easiest way to live blog from your phone.">
+<meta name="keywords" content="live blog, blogging, reporting, real time">
+<link rel="icon" href="//siteassets.pagecloud.com/livepost2/images/image-ID-06f645b2-232a-4dc1-a288-6b4bba6d1413.png" type="image/png">
+<script type="text/javascript">window.CKEDITOR_BASEPATH = '//assets.pagecloud.com/javascripts/vendor/ckeditor/';</script>
+<style id="pagecloud-fullbleed" type="text/css" class="pagecloud">.fullbleed {width: calc(((100vw - 1246px) / 2) + 1226px) !important;margin-left: calc(0px - ((100vw - 1246px) / 2)) !important;left:auto !important;-webkit-transform:none !important;-moz-transform:none!important;-ms-transform:none !important;-o-transform:none!important;transform:none !important;min-width: calc(100vw + 0px) !important;box-sizing:border-box !important;}.fullbleed.pagecloud-widget--slide {margin-left: 0px !important;left: 0px !important;}@media only screen and (max-width: 1246px)  {#page .fullbleed, #page .fixed-fullbleed, #page .pagecloud-widget--fixed-header-fullbleed {width:1246px !important;min-width:1246px !important;margin-left:0 !important;left:0!important;right:0!important;-webkit-transform:none !important;-moz-transform:none!important;-ms-transform:none !important;-o-transform:none!important;transform:none !important;}.mobile-mode .pagecloud-widget--slider .slider-gallery {position:relative !important;}.mobile-mode .pagecloud-widget--slide {top: auto !important;min-height: 100% !important;}}</style>
+<script type="text/javascript" src="https://d1l7z5ofrj6ab8.cloudfront.net/visitor/20-10-2016-15-26-58/js/widget-loader-core.js"></script>
+<div style="width: 100%; height: 100%; margin: 0px; padding: 0px; overflow: visible; background-color: rgb(0, 0, 0);" class="runtime Chrome Webkit Mac" data-alt-style="width: 100%; height: 100%; margin: 0px; padding: 0px; overflow: visible; background-color: rgb(0, 0, 0);">
+   <div class="top-gutter" style="height: 0px;">
+      <!-- Space required to give the page some gutter -->
+   </div>
+   <div id="page" style="margin-left: auto; margin-right: auto; width: 1246px; height: 2635px; min-height: 1200px; overflow: visible; position: relative; display: block;" data-alt-style="margin-left: auto; margin-right: auto; width: 468px; height: 2685px; min-height: 960px; overflow: visible; position: relative; display: block;" class="">
+      <div class="object image fullbleed background" data-original-ratio="797x92" style="position: absolute; left: -1px; top: 2419px; width: 1240px; height: 216px; background-image: url("//siteassets.pagecloud.com/livepost2/images/Protest_BW_Cropped_Bottom-ID-cb8817de-edf9-4609-a717-5af37e0d3d82.jpg"); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;" data-alt-style="position: absolute; left: 0px; top: 2549px; width: 469px; height: 137px; background-image: url('//siteassets.pagecloud.com/livepost2/images/Protest_BW_Cropped_Bottom-ID-cb8817de-edf9-4609-a717-5af37e0d3d82.jpg'); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;">
+   </div>
+   <div class="object fullbleed" style="opacity: 1; width: 1240px; height: 216px; position: absolute; left: 0px; top: 2420px; background-color: rgba(55, 68, 88, 0.890196);" data-alt-style="opacity: 1; width: 469px; height: 294px; position: absolute; left: 10px; top: 10px; background-color: rgba(55, 68, 88, 0.890196);" id="9ae6c536-90a8-4262-d7ac-bbba5902e50c"></div>
+   <div class="object fullbleed" style="opacity: 1; width: 1240px; height: 331px; position: absolute; left: 1px; top: 2109px; background-color: rgb(250, 250, 250);" data-alt-style="opacity: 1; width: 469px; height: 914px; position: absolute; left: 9px; top: 304px; background-color: rgb(250, 250, 250);"></div>
+   <div class="object fullbleed" style="opacity: 1; width: 1230px; height: 560px; position: absolute; left: 10px; top: 10px; background-color: rgba(55, 68, 88, 0.890196);" data-alt-style="opacity: 1; width: 468px; height: 137px; position: absolute; left: 0px; top: 2549px; background-color: rgba(55, 68, 88, 0.890196);"></div>
+   <div class="object fullbleed" style="opacity: 1; width: 1240px; height: 928px; position: absolute; left: 0px; top: 1181px; background-color: rgb(255, 255, 255);" data-alt-style="opacity: 1; width: 469px; height: 881px; position: absolute; left: -1px; top: 1216px; background-color: rgb(255, 255, 255);"></div>
+   <div class="object image fullbleed background" data-original-ratio="800x450" style="position: absolute; left: 0px; top: 0px; width: 1240px; height: 698px; background-image: url("//siteassets.pagecloud.com/livepost2/images/Protest_BW_Cropped-ID-dacddc58-506b-4fce-c883-0beaa5b08def.jpg"); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;" data-alt-style="position: absolute; left: 0px; top: 0px; width: 469px; height: 283px; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat; background-image: url(//siteassets.pagecloud.com/livepost2/images/Protest_BW_Cropped-ID-dacddc58-506b-4fce-c883-0beaa5b08def.jpg);">
+</div>
+<div class="object fullbleed" style="opacity: 1; width: 1240px; height: 560px; position: absolute; left: 0px; top: 0px; background-color: rgba(55, 68, 88, 0.890196);" data-alt-style="opacity: 1; width: 469px; height: 283px; position: absolute; left: 0px; top: 0px; background-color: rgba(55, 68, 88, 0.890196);" id="9ae6c536-90a8-4262-d7ac-bbba5902e50c"></div>
+<div class="object fullbleed" style="opacity: 1; width: 1240px; height: 622px; position: absolute; left: 0px; top: 560px; background-color: rgb(238, 238, 238);" data-alt-style="opacity: 1; width: 469px; height: 460px; position: absolute; left: -1px; top: 2089px; background-color: rgb(250, 250, 250);"></div>
+<div class="object text" style="width: 555px; height: 54px; position: absolute; left: 343px; top: 133px; display: block; background-color: transparent;" data-alt-style="width: 377px; height: 108px; position: absolute; left: 43px; top: 90px; display: block; background-color: transparent;" spellcheck="false">
+   <div class="content">
+      <p style="line-height: 1.5; text-align: center;" data-margin-bottom="0.7em" data-alt-style="line-height: 1.5; text-align: center;"><span data-alt-style="color:rgb(255, 255, 255); font-family:'georgia'; font-size:36px; font-style:normal; text-decoration:none" style="color: rgb(255, 255, 255); font-family: 'georgia'; font-size: 36px; font-style: normal; text-decoration: none;"><span>Cover news and events in real time</span></span></p>
+   </div>
+</div>
+<div class="object text" style="width: 329px; height: 70px; position: absolute; left: 455px; top: 187px; display: block; background-color: transparent;" data-alt-style="width: 316px; height: 70px; position: absolute; left: 76px; top: 198px; display: block; background-color: transparent;" spellcheck="false">
+   <div class="content">
+      <p style="line-height: 1.5; text-align: left;" data-margin-bottom="0.7em" data-alt-style="line-height: 1.5; text-align: left;"><span data-alt-style="color: rgb(255, 255, 255); font-family: 'georgia'; font-size: 18px; font-style: normal; text-decoration: none;" style="color: rgb(255, 255, 255); font-family: 'georgia'; font-size: 18px; font-style: normal; text-decoration: none;"><span>Live blogging has never been easier. </span></span><span data-alt-style="color: rgb(51, 51, 51); font-family: 'segoe ui emoji'; font-size: 20px; font-style: normal; line-height: 70px; text-decoration: none;" style="color: rgb(51, 51, 51); font-family: 'segoe ui emoji'; font-size: 20px; font-style: normal; line-height: 70px; text-decoration: none;"><span>😉</span></span></p>
+   </div>
+</div>
+<a class="object image proportionate" data-aspect-ratio="1123x219" data-original-ratio="1123x219" style="position: absolute; left: 45px; top: 21px; width: 156px; height: 30px;" data-alt-style="position: absolute; left: 10px; top: 24px; width: 156px; height: 30px;" data-alt-aspect-ratio="1123x219" href="/" target="_self"><img alt="" src="//siteassets.pagecloud.com/livepost2/images/LivePost_Logo-ID-d47b2598-ff82-4072-e607-02ae17b71f93.png?nocache=a1f698ab-b667-4a52-dda9-bbda58796b10" style="width: 100%; height: 100%;"></a>
+<a class="object image proportionate" data-aspect-ratio="135x40" data-original-ratio="135x40" style="position: absolute; left: 552px; top: 279px; width: 135px; height: 40px;" data-alt-style="position: absolute; left: 166px; top: 283px; width: 135px; height: 40px;" data-alt-aspect-ratio="135x40" href="http://apple.co/1WpT6kY" target="_blank"><img alt="" src="//siteassets.pagecloud.com/livepost2/images/Download_on_the_App_Store_Badge_US-UK_135x40-ID-38e5af16-6795-4640-aa45-26d20b9ce6d0.svg?nocache=7fcf3c2a-22e4-45f5-91f0-d947cf907bd4" style="width: 100%; height: 100%;"></a>
+<div class="object text" style="width: 525px; height: 54px; position: absolute; left: 358px; top: 1027px; display: block; background-color: transparent;" data-widget-type="pagecloud-text" data-widget-title="Text" data-alt-style="width: 467px; height: 54px; position: absolute; left: -2px; top: 1072px; display: block; background-color: transparent;" spellcheck="false">
+   <div class="content" data-widget-type="pagecloud-text">
+      <p style="line-height: 1.5; text-align: center;" data-margin-bottom="0.7em" data-alt-style="line-height: 1.5; text-align: center;"><span style="color: rgb(136, 136, 136); font-family: 'helvetica'; font-size: 18px; font-style: normal; text-decoration: none;"><span data-alt-style="color: rgb(136, 136, 136); font-family: 'helvetica'; font-size: 18px; font-style: normal; text-decoration: none;"><span data-alt-style="border-style:initial; border-width:0px; font-variant:inherit; font-weight:inherit; line-height:inherit" style="border-style: initial; border-width: 0px; font-variant: inherit; font-weight: inherit; line-height: inherit;">With LivePost you’ll be able to keep your audience up to date </span></span><span data-alt-style="color: rgb(134, 134, 134); font-family: 'helvetica'; font-size: 18px; font-style: normal; text-decoration: none;"><span style="font-variant: inherit; font-weight: inherit; line-height: inherit;">with photos, videos & text in real time.</span></span></span></p>
+   </div>
+</div>
+<div class="object text" style="width: 726px; height: 108px; position: absolute; left: 257px; top: 890px; display: block; background-color: transparent;" data-alt-style="width: 469px; height: 162px; position: absolute; left: -1px; top: 868px; display: block; background-color: transparent;" spellcheck="false">
+   <div class="content">
+      <h2 style="font-weight: normal; line-height: 1.5; text-align: center;" data-margin-bottom="0.7em" data-alt-style="font-weight: normal; line-height: 1.5; text-align: center;"><span data-alt-style="color: rgb(0, 0, 0); font-family: 'georgia'; font-size: 36px; font-style: normal; text-decoration: none;" style="color: rgb(0, 0, 0); font-family: 'georgia'; font-size: 36px; font-style: normal; text-decoration: none;"><span>People want to know what’s happening now. Why make them wait?</span></span></h2>
+   </div>
+</div>
+<div class="object image proportionate" data-aspect-ratio="1240x727" data-original-ratio="1240x726.5234899328859" style="position: absolute; left: 190px; top: 1264px; width: 860px; height: 504px;" data-alt-style="position: absolute; left: 19px; top: 1267px; width: 430px; height: 252px;" data-alt-aspect-ratio="1240x727"><img alt="" src="//siteassets.pagecloud.com/livepost2/images/MacBook_Pro-ID-e171ac77-15dc-4809-940c-70d2ab8a3089.png?nocache=6e428172-ec64-4b3c-fe6c-3c530da7fb2a" style="width: 100%; height: 100%;"></div>
+<div class="object text" style="width: 80px; height: 54px; position: absolute; left: 238px; top: 1908px; display: block; background-color: transparent;" data-alt-style="width: 80px; height: 54px; position: absolute; left: 146px; top: 1603px; display: block; -webkit-user-select: none; background-color: transparent; user-select: none; -moz-user-select: none; ms-user-select: none;">
+   <div class="content">
+      <p style="text-align: left;" data-margin-bottom="0.7em" data-alt-style="text-align: left;"><span style="font-family: georgia; font-size: 28px; font-style: normal; text-decoration: none; line-height: 54px;" data-alt-style="font-family: georgia; font-size: 28px; font-style: normal; text-decoration: none; line-height: 54px;"><span><span>Cover</span></span></span></p>
+   </div>
+</div>
+<div class="object text" style="width: 223px; height: 44px; position: absolute; left: 173px; top: 1961px; display: block; background-color: transparent;" data-alt-style="width: 223px; height: 44px; position: absolute; left: 146px; top: 1657px; display: block; background-color: transparent;" spellcheck="false">
+   <div class="content">
+      <p style="line-height: 1.5;" data-margin-bottom="0.7em" data-alt-style="line-height: 1.5;"><span data-alt-style="font-family:'georgia'; font-size:15px; font-style:normal; text-decoration:none" style="font-family: 'raleway'; font-size: 15px; font-style: normal; text-decoration: none;"><span>Take photos, shoot videos or just text what’s happening.</span></span></p>
+   </div>
+</div>
+<div class="object text" style="width: 93px; height: 54px; position: absolute; left: 575px; top: 1903px; display: block; background-color: transparent;" data-alt-style="width: 93px; height: 54px; position: absolute; left: 37px; top: 1768px; display: block; background-color: transparent;">
+   <div class="content">
+      <p style="text-align: left;" data-margin-bottom="0.7em" data-alt-style="text-align: left;"><span style="font-family: 'georgia'; font-size: 28px; font-style: normal; line-height: 54px; text-decoration: none;" data-alt-style="font-family: 'georgia'; font-size: 28px; font-style: normal; line-height: 54px; text-decoration: none;"><span><span>Publish</span></span></span></p>
+   </div>
+</div>
+<div class="object text" style="width: 223px; height: 44px; position: absolute; left: 525px; top: 1961px; display: block; background-color: transparent;" data-alt-style="width: 260px; height: 44px; position: absolute; left: 37px; top: 1822px; display: block; background-color: transparent;" spellcheck="false">
+   <div class="content">
+      <p style="line-height: 1.5;" data-margin-bottom="0.7em" data-alt-style="line-height: 1.5;"><span data-alt-style="font-family:'helvetica'; font-size:15px; font-style:normal; text-decoration:none" style="font-family: 'raleway'; font-size: 15px; font-style: normal; text-decoration: none;"><span><span>Post your story on your blog and it will update in real time.</span></span></span></p>
+   </div>
+</div>
+<div class="object text" style="width: 93px; height: 54px; position: absolute; left: 926px; top: 1903px; display: block; background-color: transparent;" data-alt-style="width: 93px; height: 54px; position: absolute; left: 143px; top: 1932px; display: block; background-color: transparent;">
+   <div class="content">
+      <p style="text-align: left;" data-margin-bottom="0.7em" data-alt-style="text-align: left;"><span style="font-family: 'georgia'; font-size: 28px; font-style: normal; line-height: 54px; text-decoration: none;" data-alt-style="font-family: 'georgia'; font-size: 28px; font-style: normal; line-height: 54px; text-decoration: none;"><span><span>Share</span></span></span></p>
+   </div>
+</div>
+<div class="object text" style="width: 225px; height: 44px; position: absolute; left: 860px; top: 1961px; display: block; background-color: transparent;" data-alt-style="width: 260px; height: 44px; position: absolute; left: 143px; top: 1986px; display: block; background-color: transparent;" spellcheck="false">
+   <div class="content">
+      <p style="line-height: 1.5;" data-margin-bottom="0.7em" data-alt-style="line-height: 1.5;"><span data-alt-style="font-family:'helvetica'; font-size:15px; font-style:normal; text-decoration:none" style="font-family: 'raleway'; font-size: 15px; font-style: normal; text-decoration: none;"><span><span>Like a photo you just took? Share it on Twitter &Facebook.</span></span></span></p>
+   </div>
+</div>
+<div class="object image proportionate" data-aspect-ratio="197x199" data-original-ratio="197x199" style="position: absolute; left: 931px; top: 1764px; width: 73px; height: 74px;" data-alt-style="position: absolute; left: 24px; top: 1947px; width: 111px; height: 112px;" data-alt-aspect-ratio="197x199"><img alt="" src="//siteassets.pagecloud.com/livepost2/images/Asset_1-ID-4a7f7713-fdd3-434e-f6a0-fd07a84857d3.png?nocache=e3d4c93f-e01f-430b-dc44-19f0e3bbecfd" style="width: 100%; height: 100%;"></div>
+<div class="object image proportionate" data-aspect-ratio="67x90" data-original-ratio="150x200" style="position: absolute; left: 251px; top: 1814px; width: 67px; height: 90px;" data-alt-style="position: absolute; left: 37px; top: 1612px; width: 67px; height: 90px;" data-alt-aspect-ratio="67x90"><img alt="" src="//siteassets.pagecloud.com/livepost2/images/cover_acqua-ID-0fbcd0ef-aaf8-4401-f8f6-d89a7ea47695.png?nocache=c93bd031-4a6d-4bb3-abb0-ae445b46ac2b" style="width: 100%; height: 100%;"></div>
+<div class="object image proportionate" data-aspect-ratio="84x74" data-original-ratio="150x120" style="position: absolute; left: 579px; top: 1822px; width: 84px; height: 74px;" data-alt-style="position: absolute; left: 326px; top: 1792px; width: 84px; height: 74px;" data-alt-aspect-ratio="84x74"><img alt="" src="//siteassets.pagecloud.com/livepost2/images/publish_acqua-01-ID-7010df3d-aad6-48ae-e574-369466df76ec.png?nocache=e97c6c14-8cf7-48ab-faab-a91668c16aa4" style="width: 100%; height: 100%;"></div>
+<div class="object image proportionate" data-aspect-ratio="152x155" data-original-ratio="152x155" style="position: absolute; left: 928px; top: 1827px; width: 79px; height: 81px;" data-alt-style="position: absolute; left: 37px; top: 1945px; width: 79px; height: 81px;" data-alt-aspect-ratio="152x155"><img alt="" src="//siteassets.pagecloud.com/livepost2/images/share_acqua-ID-dff737f3-48ac-4270-c21c-6adf50894542.png?nocache=4b78afda-98d9-4ab1-8e5f-5fb71cb669aa" style="width: 100%; height: 100%;"></div>
+<div class="object text" style="width: 726px; height: 54px; position: absolute; left: 258px; top: 2178px; display: block; background-color: transparent;" data-alt-style="width: 443px; height: 54px; position: absolute; left: 17px; top: 2143px; display: block; background-color: transparent;" spellcheck="false">
+   <div class="content">
+      <h2 style="font-weight: normal; line-height: 1.5; text-align: center;" data-margin-bottom="0.7em" data-alt-style="font-weight: normal; line-height: 1.5; text-align: center;"><span data-alt-style="color:rgb(0, 0, 0); font-family:'georgia'; font-size:36px; font-style:normal; text-decoration:none" style="color: rgb(0, 0, 0); font-family: 'georgia'; font-size: 36px; font-style: normal; text-decoration: none;"><span>Some of our awesome users</span></span></h2>
+   </div>
+</div>
+<div class="object image proportionate" data-aspect-ratio="518x429" data-original-ratio="518x429" style="position: absolute; left: 111px; top: 2249px; width: 126px; height: 104px;" data-alt-style="position: absolute; left: 58px; top: 2236px; width: 126px; height: 104px;" data-alt-aspect-ratio="518x429"><img alt="" src="//siteassets.pagecloud.com/livepost2/images/El_Universal_Grey-ID-51a2b58e-1a50-4330-b44b-b372c35d496d.png?nocache=f8b677ac-df4b-4ac6-af7e-9472429bae0c" style="width: 100%; height: 100%;"></div>
+<div class="object image proportionate" data-aspect-ratio="596x178" data-original-ratio="596x178" style="position: absolute; left: 621px; top: 2270px; width: 254px; height: 76px;" data-alt-style="position: absolute; left: 234px; top: 2268px; width: 254px; height: 76px;" data-alt-aspect-ratio="596x178"><img alt="" src="//siteassets.pagecloud.com/livepost2/images/Parentesis_Grey_2-ID-5cbeed9a-966f-4875-f34c-ab6ff8a200aa.png?nocache=614d8c3a-54f1-4aeb-b440-6ca1f2c5063d" style="width: 100%; height: 100%;"></div>
+<a class="object image proportionate" data-aspect-ratio="1123x219" data-original-ratio="1123x219" style="position: absolute; left: 45px; top: 2512px; width: 156px; height: 30px;" data-alt-style="position: absolute; left: 156px; top: 2633px; width: 156px; height: 30px;" data-alt-aspect-ratio="1123x219" href="/home" target="_self"><img alt="" src="//siteassets.pagecloud.com/livepost2/images/LivePost_Logo-ID-d47b2598-ff82-4072-e607-02ae17b71f93.png?nocache=a1f698ab-b667-4a52-dda9-bbda58796b10" style="width: 100%; height: 100%;"></a>
+<a class="object image proportionate" data-aspect-ratio="135x40" data-original-ratio="135x40" style="position: absolute; left: 550px; top: 1161px; width: 135px; height: 40px;" data-alt-style="position: absolute; left: 166px; top: 2069px; width: 135px; height: 40px;" data-alt-aspect-ratio="135x40" href="http://apple.co/1WpT6kY" target="_blank"><img alt="" src="//siteassets.pagecloud.com/livepost2/images/Download_on_the_App_Store_Badge_US-UK_135x40-ID-38e5af16-6795-4640-aa45-26d20b9ce6d0.svg?nocache=7fcf3c2a-22e4-45f5-91f0-d947cf907bd4" style="width: 100%; height: 100%;"></a><a class="object image proportionate" data-aspect-ratio="135x40" data-original-ratio="135x40" style="position: absolute; left: 554px; top: 2088px; width: 135px; height: 40px;" data-alt-style="position: absolute; left: 165px; top: 1185px; width: 135px; height: 40px;" data-alt-aspect-ratio="135x40" href="http://apple.co/1WpT6kY" target="_blank"><img alt="" src="//siteassets.pagecloud.com/livepost2/images/Download_on_the_App_Store_Badge_US-UK_135x40-ID-38e5af16-6795-4640-aa45-26d20b9ce6d0.svg?nocache=7fcf3c2a-22e4-45f5-91f0-d947cf907bd4" style="width: 100%; height: 100%;"></a>
+<div class="object" style="opacity: 1; width: 663px; height: 427px; position: absolute; left: 286px; top: 1283px; background-color: rgb(0, 0, 0);" data-alt-style="opacity: 1; width: 329px; height: 208px; position: absolute; left: 70px; top: 1280px; background-color: rgb(0, 0, 0);"></div>
+<div class="object image" data-original-ratio="960x540" style="position: absolute; left: 293px; top: 1295px; width: 656px; height: 403px;" data-alt-style="position: absolute; left: 72px; top: 1280px; width: 323px; height: 208px;"><img alt="" src="//siteassets.pagecloud.com/livepost2/images/upload_to_web-ID-79b51dc4-550f-44d5-9dd5-97a026cd108f.gif?nocache=9a423f15-96ae-4f8a-debd-d39a535ec0cc" style="width: 100%; height: 100%;"></div>
+<div class="object image proportionate" data-aspect-ratio="484x990" data-original-ratio="484x990" style="position: absolute; left: 860px; top: 1414px; width: 173px; height: 354px;" data-alt-style="position: absolute; left: 349px; top: 1364px; width: 87px; height: 177px;" data-alt-aspect-ratio="87x177"><img alt="" src="//siteassets.pagecloud.com/livepost2/images/iPhone_6s-ID-78221456-23e4-43f8-c92a-f3f8c4f77e43.png?nocache=be799982-46fe-45a7-c300-9c589e9808ec" style="width: 100%; height: 100%;"></div>
+<div class="object image proportionate rotated" data-aspect-ratio="960x540" data-original-ratio="960x540" style="position: absolute; left: 810px; top: 1515px; width: 273px; height: 154px; transform: rotate(90deg); transform-origin: 50% 50%; -webkit-backface-visibility: hidden; -moz-transform: rotate(90deg); -webkit-transform: rotate(90deg); ms-transform: rotate(90deg); -moz-transform-origin: 50% 50%; -webkit-transform-origin: 50% 50%; ms-transform-origin: 50% 50%; backface-visibility: hidden; -moz-backface-visibility: hidden; ms-backface-visibility: hidden;" data-alt-style="position: absolute; left: 324px; top: 1414px; width: 137px; height: 77px; transform: rotate(90deg); transform-origin: 50% 50%; -webkit-backface-visibility: hidden; -moz-transform: rotate(90deg); -webkit-transform: rotate(90deg); ms-transform: rotate(90deg); -moz-transform-origin: 50% 50%; -webkit-transform-origin: 50% 50%; ms-transform-origin: 50% 50%; backface-visibility: hidden; -moz-backface-visibility: hidden; ms-backface-visibility: hidden;" data-alt-rotation="90" data-alt-aspect-ratio="960x540" data-rotation="90"><img alt="" src="//siteassets.pagecloud.com/livepost2/images/upload_to_app-ID-387bd9d0-4154-4ed8-eb83-8f1f3abf61e8.gif?nocache=f246ac0f-b594-416f-fd28-4e4635eb1955" style="width: 100%; height: 100%;"></div>
+<div class="object image proportionate" data-aspect-ratio="625x254" data-original-ratio="625x254" style="position: absolute; left: 337px; top: 2270px; width: 184px; height: 75px;" data-alt-style="position: absolute; left: 29px; top: 2424px; width: 184px; height: 75px;" data-alt-aspect-ratio="625x254"><img alt="" src="//siteassets.pagecloud.com/livepost2/images/abc-ID-f247661d-a0fe-45b1-dafd-874f4987ce5c.png?nocache=74428d60-e3f9-4b42-9d47-34faf7356600" style="width: 100%; height: 100%;"></div>
+<div class="object image proportionate" data-aspect-ratio="1150x2300" data-original-ratio="1150x2300" style="position: absolute; left: 501px; top: 364px; width: 246px; height: 492px;" data-alt-style="position: absolute; left: 108px; top: 340px; width: 246px; height: 492px;" data-alt-aspect-ratio="1150x2300"><img alt="" src="//siteassets.pagecloud.com/livepost2/images/Hillary_Trump_Story-ID-2633fc56-5622-4329-c6e2-5a6121f68a0f.png?nocache=fb436c5b-88c7-4d4b-de57-746fed4ab090" style="width: 100%; height: 100%;"></div>
+<div class="object image proportionate" data-aspect-ratio="975x337" data-original-ratio="975x337" style="position: absolute; left: 984px; top: 2274px; width: 212px; height: 73px;" data-alt-style="position: absolute; left: 242px; top: 2424px; width: 212px; height: 73px;" data-alt-aspect-ratio="975x337"><img alt="" src="//siteassets.pagecloud.com/livepost2/images/Posta_Black_and_White-ID-277de5d7-5c3c-4057-b203-cf6072489e57.png?nocache=dd595bcf-c861-4c24-a75d-4340435bd355" style="width: 100%; height: 100%;"></div>
+</div>
+<div class="bottom-gutter" style="height: 0px;">
+   <!-- Space required to give the page some gutter -->
+</div>
+<script id="display-js" class="pagecloud-runtime" data-static-path="//assets.pagecloud.com/" data-class="pagecloud" type="text/javascript" src="//assets.pagecloud.com/javascripts/libraries/display.js"></script>
+<script src="https://www.youtube.com/iframe_api" class="youtube-mute-script design-safe"></script>
+<script data-pagecloud-original-type="text/javascript" type="text/javascript" data-widget-type="pagecloud-external-scripts-styles" data-widget-title="External Scripts and Styles">
+   window.HFCHAT_CONFIG = {
+       EMBED_TOKEN: "2e249390-4ad4-11e6-b314-1d0cdab6f4e0",
+       ACCESS_TOKEN: "87f1ba1ef1154669b6df9f96d7cee0ad",
+       HOST_URL: "https://happyfoxchat.com",
+       ASSETS_URL: "https://d1l7z5ofrj6ab8.cloudfront.net/visitor"
+   };
+   
+   (function() {
+    var scriptTag = document.createElement('script');
+    scriptTag.type = 'text/javascript';
+    scriptTag.async = true;
+    scriptTag.src = window.HFCHAT_CONFIG.ASSETS_URL + '/js/widget-loader.js';
+   
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(scriptTag, s);
+   })();
+</script>
+<script data-optimize="true" data-pagecloud-original-type="text/javascript" type="text/javascript" data-widget-type="pagecloud-google-analytics" data-widget-title="Google Analytics">var _gaq = _gaq || [];
+   _gaq.push(['_setAccount', 'UA-85271509-1']);
+   _gaq.push(['_trackPageview']);
+   
+   (function() {
+   	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+   	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+   	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+   })();
+</script>
+<script type="text/javascript" data-pagecloud-original-type="text/javascript" data-widget-type="pagecloud-external-scripts-styles" data-widget-title="External Scripts and Styles"> var infolinks_pid = 2887230; var infolinks_wsid = 0; </script>
+<style>#hfc-frame { background-color: transparent; display: none; position: fixed; bottom: 15px; right: 15px; overflow: hidden; visibility: visible; z-index: 2147483639; border: 0px; backface-visibility: hidden; opacity: 1; background: transparent; } #hfc-frame.badge-bottom { width: 0px; height: 0px; } #hfc-frame.badge-right { right: 0; top: 50%; width: 0px; height: 0px; transform: translateY(-50%); } #hfc-frame.badge-left { left: 0; top: 50%; width: 0px; height: 0px; transform: translateY(-50%); } #hfc-frame.chatbox { width: 0px; height: 0px; } #hfc-frame.chatbox.mobile { bottom: 0; top: 0px; left: 0px; width: 100% !important; height: 100% !important; z-index: 9999999999; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; background-color: transparent; } #hfc-frame.mobile { right: 0; }</style>
+<iframe id="hfc-frame" frameborder="0" src="https://happyfoxchat.com/widget/dist/widget.html" class="badge-bottom" style="display: inline; width: 190px; height: 55px;"></iframe>
+</div>

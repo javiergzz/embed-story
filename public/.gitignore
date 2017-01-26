@@ -1,0 +1,16 @@
+_old/
+_test/
+bower_components/
+www/
+/node_modules
+/sftp-config.json
+/sftp-config.json.temp
+/web.config
+/sublime-gulp.cache
+*DS_Store*
+*test*
+*old*
+*glue*
+*build*
+*cache*
+*devl*

@@ -1,0 +1,46 @@
+<div id="container-post"  ng-controller="StoryController" ng-cloak>
+   <div infinite-scroll='loadMore()' infinite-scroll-distance='2' >
+      <div ng-repeat="item in updates | orderBy: '-timestamp' | limitTo: limit" id="x-{{ ::$index }}">
+         <div class="separator">
+            <!-- <div ng-show="$index != 0 && $index % 12 == 0"> -->
+            <!-- ads  -->
+            <!-- </div> -->
+            <div class="row">
+               <div class="col-xs-2 col-lg-1">
+                  <p class="time">{{ item.timestamp | date:"h:mma" }}</p>
+               </div>
+               <div ng-if="item.message.indexOf('https://livepostrocks.s3.amazonaws.com/') == -1 && item.message.indexOf('http://livepostdev.blob.core.windows.net/') == -1" class="col-xs-10 col-lg-11">
+                  <p ng-bind-html=" item.message | linky:'_blank'" ng-click="containsUrl(item.message)" class="msg">{{item.message}}</p>
+               </div>
+               <div angular-lazy-load ng-if="item.message.indexOf('https://livepostrocks.s3.amazonaws.com/images/') != -1 || item.message.indexOf('http://livepostdev.blob.core.windows.net/images/') != -1"  class="image-resize col-xs-10 col-lg-11">
+                  <a ng-click="openModal(item.message)">
+                  <img img-fix-orientation="item.message" class="image" data-src="{{item.message}}" threshold="200">
+                  </a>
+               </div>
+               <div angular-lazy-load ng-if="item.message.indexOf('https://livepostrocks.s3.amazonaws.com/videos/') != -1 || item.message.indexOf('http://livepostdev.blob.core.windows.net/videos/') != -1" class="col-xs-10  col-lg-11">
+                  <video video-loader class="video" controls>
+                     <source src="{{item.message}}">
+                  </video>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-xs-2 col-lg-1"></div>
+               <div angular-lazy-load class="col-xs-10 col-lg-11">
+                  <img data-src="{{ item.profile_picture || 'https://livepostrocks.s3.amazonaws.com/default_user_profile_blue.png' }}" class="profile-picture">
+                  <p class="sender">{{item.sender}}</p>
+               </div>
+            </div>
+         </div>
+         <div class="separator-line"></div>
+      </div>
+   </div>
+</div>
+<div id="loader" class="preloader">
+</div>
+<div class="footer-cont">
+   <div id="footer-post">
+      <a href="http://apple.co/2dadVy6" target="_blank">
+      <img id="img-footer"> 
+      </a> 
+   </div>
+</div>
