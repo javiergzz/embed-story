@@ -48,4 +48,30 @@ angular.module('livepost')
     };
     return Actions;
   }
+)
+.factory("analytics", function($firebaseObject) {
+    var Actions = {};
+    Actions.get = function(path){
+        if(path){
+            var ref = firebase.database().ref().child(path);
+            return $firebaseObject(ref);    
+        }
+        console.log("Path could not be null.");
+        return null;
+    };
+    return Actions;
+  }
+)
+.factory("analyticsUpdates", function() {
+    var Actions = {};
+    Actions.get = function(path){
+        if(path){
+            var ref = firebase.database().ref().child(path);
+            return ref; 
+        }
+        console.log("Path could not be null.");
+        return null;
+    };
+    return Actions;
+  }
 );

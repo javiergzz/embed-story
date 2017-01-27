@@ -16,6 +16,13 @@ angular.module('livepost')
         }
     },
     {
+        path: '/story/a/:id',
+        options: {
+            templateUrl: 'analytics/analytics.view.html',
+            controller: 'AnalyticsController'
+        }
+    },
+    {
         path: '/404',
         options: {
             templateUrl: 'not_found/404.html'

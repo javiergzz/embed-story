@@ -1,0 +1,51 @@
+<div class="body-analytics">
+   <div style="background-color:#FAFAFA !important;">
+      <div>
+         <div class="nav">
+            <div class="jumbotron">
+               <div class="container">
+                  <h1>Analytics</h1>
+                  <p>Check out how your story is performing here.</p>
+               </div>
+            </div>
+         </div>
+         <div class="right_col" role="main" style="min-height: 200px; background-color:#FAFAFA !important;">
+            <!-- top tiles -->
+            <div class="row tile_count">
+               <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count" ng-if="analytics.unique_visits">
+                  <span class="count_top"><i class="fa fa-user"></i> Unique Visits</span>
+                  <div class="count">{{ analytics.unique_visits }}</div>
+               </div>
+               <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count" ng-if="analytics.story_views">
+                  <span class="count_top"><i class="fa fa-user"></i> Story Views</span>
+                  <div class="count">{{ analytics.story_views }}</div>
+               </div>
+               <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count" ng-if="average_time">
+                  <span class="count_top"><i class="fa fa-clock-o"></i> Average Time</span>
+                  <div class="count">{{ average_time }}</div>
+               </div>
+               <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count" ng-if="analytics.shares">
+                  <span class="count_top"><i class="fa fa-share-square-o"></i> Shares</span>
+                  <div class="count">{{ analytics.shares }}</div>
+               </div>
+               <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count" ng-if="analytics.image_views">
+                  <span class="count_top"><i class="fa fa-image"></i> Image Views</span>
+                  <div class="count">{{ analytics.image_views }}</div>
+               </div>
+               <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count" ng-if="analytics.video_views">
+                  <span class="count_top"><i class="fa fa-file-video-o"></i> Video Views</span>
+                  <div class="count">{{ analytics.video_views }}</div>
+               </div>
+               <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count" ng-if="analytics.link_clicks">
+                  <span class="count_top"><i class="fa fa-external-link"></i> Link Clicks</span>
+                  <div class="count">{{ analytics.link_clicks }}</div>
+               </div>
+               <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count" ng-if="total_updates">
+                  <span class="count_top"><i class="fa fa-rss-square"></i> Total Updates</span>
+                  <div class="count">{{ total_updates }}</div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

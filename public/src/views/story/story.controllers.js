@@ -123,5 +123,5 @@ angular.module('livepost')
         lastOnlineRef.onDisconnect().set(firebase.database.ServerValue.TIMESTAMP);
     };
 
-    // $scope.savePresenceSystem();
+    $scope.savePresenceSystem();
 });

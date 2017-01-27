@@ -35,7 +35,8 @@
     "angularfire": "^2.3.0",
     "angular-sanitize": "^1.6.1",
     "angular-route": "^1.6.1",
-    "angular-fix-image-orientation": "casualbot-angular-exif-orientation#*"
+    "angular-fix-image-orientation": "casualbot-angular-exif-orientation#*",
+    "components-font-awesome": "^4.7.0"
   },
   "overrides": {
     "bootstrap": {
