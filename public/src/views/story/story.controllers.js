@@ -124,8 +124,4 @@ angular.module('livepost')
     };
 
     // $scope.savePresenceSystem();
-
-    $scope.isNullOrEmpty = function(value){
-    	return value === undefined || value === null;
-    };
 });

@@ -14,7 +14,7 @@
    <div style="max-height: 423px">
       <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
          <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-            <img class="img-responsive img-modal" ng-src="{{slide.image}}" style="margin:auto;">
+            <img img-fix-orientation="slide.image" class="img-responsive img-modal" ng-src="{{slide.image}}" style="margin:auto;">
             <div class="carousel-caption">
              <h6>{{slide.id + 1 }} of {{slides.length}}</h6>
            </div>
