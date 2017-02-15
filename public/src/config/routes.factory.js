@@ -27,6 +27,13 @@ angular.module('livepost')
         options: {
             templateUrl: 'not_found/404.html'
         }
+    },
+    {
+        path: '/rss',
+        options: {
+            templateUrl: 'rss_cards/rss.view.html',
+            controller: 'RssController'
+        }
     }];
     return routes;
 });

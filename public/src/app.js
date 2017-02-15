@@ -34,6 +34,7 @@ angular.module('livepost', [
         storageBucket: "developer-livepost.appspot.com",
         messagingSenderId: "579641317343"
     };
+    
     firebase.initializeApp(config);
 })
 .controller('main', function($scope, $route) {

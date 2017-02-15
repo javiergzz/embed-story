@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="row col-md-12" style="padding-top: 50px; padding-left: 20px; font-family: 'Roboto';">
+        <div class="col-md-12">
+           <div class="form-inline">
+               <!-- turn this into a select to search multiple indexes -->
+               <input type="hidden" name="index" value="firebase" />
+               <div class="input-group col-md-12" style="padding-bottom: 10px;">
+                   <input type="text" class="form-control" name="term" value="" placeholder="And I say, hey yeah yeah, hey yeah yeah I said hey, what's going on?" ng-model="query.q">
+                   <span class="input-group-btn">
+                       <button ng-click="doSearch($event)" class="btn btn-default" type="submit" style="color: #666">Search</button>
+                   </span>
+               </div>
+           </div>
+           <div ng-if="info" class="alert alert-warning">
+			  Total results: 0.
+		   </div>
+        </div>
+    </div>
+	<div class="container">
+		<div class="thumbnail" ng-repeat="a in articles" id="x-{{ ::$index }}">
+			<div class="md-card" style="max-width: 300px;">
+				<a ng-href="{{ a._source.url }}" target="_blank">
+					<img ng-src="{{ a._source.image }}" class="md-card-image" alt="Cool image">
+				</a>
+		        <div class="md-card-title">
+		          <div class="md-card-title-text">
+		            <span class="md-headline">{{ a._source.title }}</span>
+		          </div>
+		        </div>
+		        <div class="md-card-content">
+		          <p ng-bind-html="a._source.description"></p>
+		        </div>
+		        <div class="md-card-actions" layout="column" layout-align="start">
+		          <a ng-href="{{ a._source.source.url }}" target="_blank">
+		          	<div class="column">
+			          	<img class="col-sm-3 col-xs-3 col-md-3 col-lg-3" ng-src="{{ a._source.source.image }}" class="img-responsive img-rounded img-newspaper">	
+			          	<span class="col-sm-8 col-xs-8 col-md-8 col-lg-8">{{ a._source.source.title }}</span>
+			        </div>
+		          </a>
+		        </div>
+	      	</div>
+		</div>
+	</div>
+</div>
