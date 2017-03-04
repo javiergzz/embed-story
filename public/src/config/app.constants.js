@@ -31,4 +31,18 @@ angular.module("livepost")
 .constant('USER_ROLES', {
   all: '*',
   guest: 'guest'
+})
+.constant('PUSH', {
+  access : {
+    login : "frank",
+    password : "trustfrank"
+  },
+  key : {
+    prod : 'CTttWWjtZ1NbSuLm1eIhd35XpwDJURSg',
+    dev : 'VJeW66rHkvsIpUMNmZEZvdXR6NZdz0Xw',
+    selected : 'VJeW66rHkvsIpUMNmZEZvdXR6NZdz0Xw'
+  }
+})
+.constant('DIR_CLOUD', {
+  hostSelected :  'https://api.cloud.appcelerator.com/v1/'
 });

@@ -34,6 +34,13 @@ angular.module('livepost')
             templateUrl: 'rss_cards/rss.view.html',
             controller: 'RssController'
         }
+    },
+    {
+        path: '/builder',
+        options: {
+            templateUrl: 'frank-builder/builder.view.html',
+            controller: 'BuilderController'
+        }
     }];
     return routes;
 });

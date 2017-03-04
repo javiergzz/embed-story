@@ -6,7 +6,8 @@ angular.module('livepost', [
     'LocalStorageModule',
     'ui.bootstrap',
     'firebase',
-    'fix-image-orientation'
+    'fix-image-orientation',
+    'dndLists'
 ])
 .config(function($routeProvider, MyRoutesProvider, $sceProvider, localStorageServiceProvider) {
     "use strict";
@@ -28,12 +29,20 @@ angular.module('livepost', [
     });
 
     var config = {
-        apiKey: "AIzaSyCbxo9Jz-44782HpXjwAkWRHfV1Qis5C_k",
-        authDomain: "developer-livepost.firebaseapp.com",
-        databaseURL: "https://developer-livepost.firebaseio.com",
-        storageBucket: "developer-livepost.appspot.com",
-        messagingSenderId: "579641317343"
+        apiKey: "AIzaSyA1pwq4QX3CfIRsYbS_8djG9NGBEyXgZ-I",
+        authDomain: "rss-trusted-news.firebaseapp.com",
+        databaseURL: "https://rss-trusted-news.firebaseio.com",
+        storageBucket: "rss-trusted-news.appspot.com",
+        messagingSenderId: "3204402711"
     };
+
+    // var config = {
+    //     apiKey: "AIzaSyCbxo9Jz-44782HpXjwAkWRHfV1Qis5C_k",
+    //     authDomain: "developer-livepost.firebaseapp.com",
+    //     databaseURL: "https://developer-livepost.firebaseio.com",
+    //     storageBucket: "developer-livepost.appspot.com",
+    //     messagingSenderId: "579641317343"
+    // };
     
     firebase.initializeApp(config);
 })
