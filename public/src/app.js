@@ -7,9 +7,11 @@ angular.module('livepost', [
     'ui.bootstrap',
     'firebase',
     'fix-image-orientation',
-    'dndLists'
+    'dndLists',
+    'angular-loading-bar',
+    'cfp.loadingBar'
 ])
-.config(function($routeProvider, MyRoutesProvider, $sceProvider, localStorageServiceProvider) {
+.config(function($routeProvider, MyRoutesProvider, $sceProvider, localStorageServiceProvider, cfpLoadingBarProvider) {
     "use strict";
     var MyRoutes = MyRoutesProvider.$get();
     angular.forEach(MyRoutes, function(route) {
@@ -20,6 +22,7 @@ angular.module('livepost', [
     });
     $sceProvider.enabled(false); 
     localStorageServiceProvider.setStorageType('sessionStorage');
+    cfpLoadingBarProvider.includeSpinner = false;
 })
 .run(function($rootScope, MyRoutes) {
     "use strict";

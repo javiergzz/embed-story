@@ -77,13 +77,12 @@ angular.module('livepost')
 )
 .factory('FrankBuilder', function(PUSH, $resource){
     return  $resource("http://localhost:3002/frank/v1/top-stories", {}, {
-            post : {
-                method: 'POST',
-                transformRequest : function(data){
-                    return JSON.stringify(data);
-                },
-                isArray: true
-            }
+        post : {
+            method: 'POST',
+            transformRequest : function(data){
+                return JSON.stringify(data);
+            },
+            isArray: true
         }
-    );
+    });
 });
